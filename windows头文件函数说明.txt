@@ -1,0 +1,23 @@
+.LOG
+HANDLE:
+1、handle是句柄类型，来源于Handle-C，Handle-C是硬件描述语言。windows在创建一个系统对象的同时，把一个句柄赋值给这个实体 ，可以用这个句柄来识别或者修改这个对象， 这就是handle句柄的作用。
+2、句柄（HANDLE)是资源的标识。操作系统要管理和操作这些资源，都是通过句柄来找到对应的资源。按资源的类型，又可将句柄细分成图标句柄（HICON），光标句柄（HCURSOR），窗口句柄（HWND），应用程序实例句柄（HINSTANCE）等等各种类型的句柄。 所以HWND是一种HANDLE
+
+GetStdHandle:
+GetStdHandle（）返回标准的输入、输出或错误的设备的句柄，也就是获得输入、输出/错误的屏幕缓冲区的句柄。
+
+CONSOLE_CURSOR-INFO:
+这个结构包含的是控制台光标的信息
+ typedef struct _CONSOLE_CURSOR_INFO {
+  DWORD dwSize;// 光标百分比厚度（1~100） 
+  BOOL  bVisible;// 是否可见
+  } CONSOLE_CURSOR_INFO, *PCONSOLE_CURSOR_INFO;
+
+
+
+GetConsoleCursorInfo:
+GetConsoleCursorInfo 函数
+检索有关指定的控制台屏幕缓冲区的光标的可见性和大小信息。
+9:06 2019/7/16
+
+15:40 2019/7/17
